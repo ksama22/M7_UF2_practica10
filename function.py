@@ -18,14 +18,13 @@ def llegitNomColumnes():
 
 
 
-def Ex1():
+def Ex1(arxiu):
     #Llegir fitxer
-    df = pd.read_csv('files/test.csv', usecols=("id","clock_speed"))
-    print(df)
-
-    X = list(df.iloc[:, 0])
-    Y = list(df.iloc[:, 1])
-
+    #arxiu = pd.read_csv('files/testcopy.csv', usecols=("id","clock_speed"))
+    print(arxiu)
+    arxiu = arxiu[arxiu["id"]==1]
+    X = list(arxiu.iloc[:, 0])
+    Y = list(arxiu.iloc[:, 1])
     # Plot the data using bar() method
     plt.bar(X, Y, color='red')
     plt.title("Exercici 1")
@@ -34,9 +33,9 @@ def Ex1():
     # Show the plot
     plt.show()
 
-def Ex2():
+def Ex2(df):
     # Llegir fitxer
-    df = pd.read_csv('files/test.csv', usecols=("id", "battery_power"))
+    #df = pd.read_csv('files/test.csv', usecols=("id", "battery_power"))
     print(df)
 
     X = list(df.iloc[:, 0])
@@ -50,9 +49,9 @@ def Ex2():
     # Show the plot
     plt.show()
 
-def Ex3():
+def Ex3(df):
     # Llegir fitxer
-    df = pd.read_csv('files/test.csv', usecols=("id", "px_height"))
+    #df = pd.read_csv('files/test.csv', usecols=("id", "px_height"))
     print(df)
 
     X = list(df.iloc[:, 0])
@@ -63,7 +62,7 @@ def Ex3():
     plt.title("Exercici 3")
     plt.xlabel("ID Mobile")
     plt.ylabel("px_height")
-    plt.savefig("images/exercici3.jpg")
+    #plt.savefig("images/exercici3.jpg")
 
     # Show the plot
     plt.show()
