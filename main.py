@@ -1,10 +1,14 @@
-from function import *
+#from function import * importaria tot de aquest arxiu
+import function as f
 
-#arxiu = pd.read_csv('files/testcopy.csv', usecols=("id", "clock_speed"))
-arxiu = pd.read_csv('files/test.csv', usecols=("id", "clock_speed"))
+# arxiu = pd.read_csv('files/mobile.csv', usecols=("id", "clock_speed"))
+arxiu = 'files/mobile.csv'
+
 print("Exercici 1")
-Ex1(arxiu)
+print(f.Ex1(arxiu))
+
 print("Exercici 2")
-Ex2(arxiu)
+print(f.Ex2(arxiu))
+
 print("Exercici 3")
-Ex3(arxiu)
+print(f.Ex3(arxiu))
